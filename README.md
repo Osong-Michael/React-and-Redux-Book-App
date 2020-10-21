@@ -17,7 +17,7 @@ A simple Calculator application built with React.
   <h1 align="center">My Books</h1>
 
   <p align="center">
-    <a href=""><strong>View Demo</strong></a>
+    <a href="https://oa7-books.herokuapp.com/"><strong>View Demo</strong></a>
     ·
     <a href="https://github.com/OA7/React-and-Redux-Book-App/issues">Report Bug</a>
     ·
