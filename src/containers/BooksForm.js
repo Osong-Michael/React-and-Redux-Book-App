@@ -1,10 +1,10 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const BooksForm = ({ handleSubmit }) => {
+const BooksForm = () => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <label>
         Author Name:
         <input type="text" name=" Author Name" />
@@ -28,10 +28,6 @@ const BooksForm = ({ handleSubmit }) => {
       <input type="submit" value="Submit" />
     </form>
   );
-};
-
-BooksForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default BooksForm;
