@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Book from '../containers/Book';
+import Book from '../components/Book';
 
 function BooksList({ books }) {
   const bookList = books.map(book => (

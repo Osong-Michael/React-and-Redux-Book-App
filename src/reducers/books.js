@@ -1,4 +1,7 @@
-const booksReducer = (state, action) => {
+// eslint-disable-next-line import/no-cycle
+import { initState } from '../index';
+
+const booksReducer = (state = initState, action) => {
   if (action.type === 'CREATE_BOOK') {
     const allBooks = [...state.books, action.book];
     return {

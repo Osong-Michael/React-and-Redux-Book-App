@@ -7,7 +7,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import allReducers from './reducers/index';
 
-const initState = {
+export const initState = {
   books: [
     {
       author: 'JK Rowlings',
