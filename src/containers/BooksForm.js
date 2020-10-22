@@ -1,33 +1,74 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable arrow-body-style */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
 
-const BooksForm = () => {
-  return (
-    <form>
-      <label>
-        Author Name:
-        <input type="text" name=" Author Name" />
-      </label>
-      <label>
-        Book Name:
-        <input type="text" name="Book Name" />
-      </label>
-      <label>
-        Select Category:
-        <select>
-          <option value="Action">Action</option>
-          <option value="Biography">Biography</option>
-          <option value="History">History</option>
-          <option value="Horror">Horror</option>
-          <option value="Kids">Kids</option>
-          <option value="Learning">Learning</option>
-          <option value="Sci-Fi">Sci-Fi</option>
+class BookForm extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      author: null,
+      title: null,
+      category: 'Select a Category',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+    // this.props.createBook(this.state);
+  }
+
+  render() {
+    const categories = [
+      'Action',
+      'Biography',
+      'History',
+      'Horror',
+      'Kids',
+      'Learning',
+      'Sci-Fi',
+    ];
+    const catList = categories.map(cat => (
+      <option key={Math.random()} value={cat}>
+        {cat}
+      </option>
+    ));
+
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="title">
+          Author:
+          <input name="author" type="text" onChange={this.handleChange} />
+        </label>
+        <label htmlFor="title">
+          Title:
+          <input name="title" type="text" onChange={this.handleChange} />
+        </label>
+
+        <select name="category" onChange={this.handleChange} value={this.state.category}>
+          {catList}
         </select>
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
-  );
+        <button type="submit">Submit</button>
+      </form>
+    );
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    createBook: book => { dispatch(createBook(book)); },
+  };
 };
 
-export default BooksForm;
+export default connect(null, mapDispatchToProps)(BookForm);
