@@ -1,68 +1,110 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React and Redux Book App
 
-## Available Scripts
+A simple Calculator application built with React.
 
-In the project directory, you can run:
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-### `yarn start`
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/OA7/React-and-Redux-Book-App">
+    <img src="public/book_PNG2105.png" alt="Logo" width="150" height="150">
+  </a>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <h1 align="center">My Books</h1>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  <p align="center">
+    <a href="https://oa7-books.herokuapp.com/"><strong>View Demo</strong></a>
+    ·
+    <a href="https://github.com/OA7/React-and-Redux-Book-App/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/OA7/React-and-Redux-Book-App/issues">Request Feature</a>
+  </p>
+</p>
 
-### `yarn test`
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [About the Project](#about-the-project)
+* [Use Locally](#local-usage)
+  * [Built With](#built-with)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+* [License](#license)
 
-### `yarn build`
+<br>
+<br>
+<!-- ABOUT THE PROJECT -->
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## About The Project
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+A simple books app that lets you categorize books you will like to read.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Product Name Screen Shot][product-screenshot]
+<br>
+<br>
+<!-- ![Product Name Screen Shot][product-screenshot2] -->
 
-### `yarn eject`
+<!-- ABOUT THE PROJECT -->
+## Local Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To use this app locally, this is what you need to:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [Download](https://github.com/OA7/React-and-Redux-Book-App/archive/master.zip) or clone this repo:
+  - Clone with SSH:
+  ```
+    git@github.com:OA7/React-and-Redux-Book-App.git
+  ```
+  - Clone with HTTPS
+  ```
+    https://github.com/OA7/React-and-Redux-Book-App.git
+  ```
+* `cd` into the downloaded folder and run `npm install`
+* then, run `npm start`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Built With
+This project was built using these technologies.
+* ReactJs
+* JavaScript
+* Webpack
+* Babel
+* Redux
+* prop-types library
+* CSS
+* Chrome Dev Tools
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<!-- CONTACT -->
 
-## Learn More
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Osong Agberndifor**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Github: [OA7](https://github.com/OA7)
+- Twitter: [@Osong17](https://twitter.com/Osong17)
+- Linkedin: [Osong](https://linkedin.com/osong-agberndifor)
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Microverse](https://www.microverse.org/)
 
-### Analyzing the Bundle Size
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/OA7/React-and-Redux-Book-App.svg?style=flat-square
+[contributors-url]: https://github.com/OA7/React-and-Redux-Book-App/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/OA7/React-and-Redux-Book-App.svg?style=flat-square
+[forks-url]: https://github.com/OA7/React-and-Redux-Book-App/network/members
+[stars-shield]: https://img.shields.io/github/stars/OA7/React-and-Redux-Book-App.svg?style=flat-square
+[stars-url]: https://github.com/OA7/React-and-Redux-Book-App/stargazers
+[issues-shield]: https://img.shields.io/github/issues/OA7/React-and-Redux-Book-App.svg?style=flat-square
+[issues-url]: https://github.com/OA7/React-and-Redux-Book-App/issues
+[product-screenshot]: public/
+<!-- [product-screenshot2]: dist/images/page2.png -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## 📝 License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
