@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
 class BookForm extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       author: null,
@@ -25,8 +25,7 @@ class BookForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
-    // this.props.createBook(this.state);
+    createBook(this.state);
   }
 
   render() {
@@ -47,7 +46,7 @@ class BookForm extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="title">
+        <label htmlFor="author">
           Author:
           <input name="author" type="text" onChange={this.handleChange} />
         </label>
