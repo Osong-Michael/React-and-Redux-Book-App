@@ -26,12 +26,10 @@ function BooksList({ books }) {
   );
 }
 
-const mapStateToProps = state => ({
-  books: state.books,
-});
+const mapStateToProps = state => ({ books: state.booksReducer.books });
 
 BooksList.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.array),
+  books: PropTypes.arrayOf(PropTypes.object),
 };
 
 BooksList.defaultProps = {

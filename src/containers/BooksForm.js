@@ -10,6 +10,7 @@ class BookForm extends Component {
 
     this.state = {
       author: '',
+      id: Math.random(),
       title: '',
       category: '',
     };
@@ -27,7 +28,18 @@ class BookForm extends Component {
     e.preventDefault();
     // eslint-disable-next-line react/prop-types
     this.props.createBook(this.state);
+    // console.log(this.state);
     e.target.reset();
+    this.resetState();
+  }
+
+  resetState() {
+    this.setState({
+      author: '',
+      id: Math.random(),
+      title: '',
+      category: '',
+    });
   }
 
   render() {
