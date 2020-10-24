@@ -9,9 +9,9 @@ class BookForm extends Component {
     super();
 
     this.state = {
-      author: null,
-      title: null,
-      category: 'Select a Category',
+      author: '',
+      title: '',
+      category: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,7 +25,8 @@ class BookForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    createBook(this.state);
+    // eslint-disable-next-line react/prop-types
+    this.props.createBook(this.state);
     e.target.reset();
   }
 

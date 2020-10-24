@@ -1,5 +1,21 @@
 // eslint-disable-next-line import/no-cycle
-import { initState } from '../index';
+// import { initState } from '../index';
+const initState = {
+  books: [
+    {
+      author: 'JK Rowlings',
+      id: Math.random(),
+      title: 'Harry Potter',
+      category: 'Sci-Fi',
+    },
+    {
+      author: 'Ross James',
+      id: Math.random(),
+      title: 'Survivor',
+      category: 'Action',
+    },
+  ],
+};
 
 const booksReducer = (state = initState, action) => {
   if (action.type === 'CREATE_BOOK') {
