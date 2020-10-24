@@ -1,5 +1,4 @@
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable arrow-body-style */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
@@ -78,10 +77,8 @@ class BookForm extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    createBook: book => { dispatch(createBook(book)); },
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  createBook: book => { dispatch(createBook(book)); },
+});
 
 export default connect(null, mapDispatchToProps)(BookForm);
