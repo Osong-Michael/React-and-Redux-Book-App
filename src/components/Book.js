@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line arrow-body-style
-const Book = ({ book, removeBooks }) => {
-  const myFunc = bookz => { removeBooks(bookz); };
+const Book = ({ book, handleRemoveBook }) => {
+  const myFunc = bookz => { handleRemoveBook(bookz); };
   const {
     author, id, title, category,
   } = book;
@@ -29,7 +29,7 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }).isRequired,
-  removeBooks: PropTypes.func.isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;

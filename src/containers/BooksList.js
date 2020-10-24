@@ -5,12 +5,12 @@ import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 
 function BooksList({ books, removeBook }) {
-  const removeBooks = book => {
+  const handleRemoveBook = book => {
     removeBook(book);
   };
 
   const bookList = books.map(book => (
-    <Book book={book} key={Math.random()} removeBooks={removeBooks} />
+    <Book book={book} key={Math.random()} handleRemoveBook={handleRemoveBook} />
   ));
 
   return (
@@ -22,7 +22,6 @@ function BooksList({ books, removeBook }) {
             <th>Book ID</th>
             <th>Book Title</th>
             <th>Category</th>
-            <th>Delete Book</th>
           </tr>
         </thead>
         <tbody>
