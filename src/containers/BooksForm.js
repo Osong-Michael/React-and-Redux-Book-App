@@ -1,17 +1,18 @@
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable arrow-body-style */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createBook } from '../actions/index';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions';
 
 class BookForm extends Component {
   constructor() {
     super();
 
     this.state = {
-      author: null,
-      title: null,
-      category: 'Select a Category',
+      author: '',
+      id: Math.random(),
+      title: '',
+      category: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,7 +26,18 @@ class BookForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    createBook(this.state);
+    this.props.createBook(this.state);
+    e.target.reset();
+    this.resetState();
+  }
+
+  resetState() {
+    this.setState({
+      author: '',
+      id: Math.random(),
+      title: '',
+      category: '',
+    });
   }
 
   render() {
@@ -64,10 +76,12 @@ class BookForm extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    createBook: book => { dispatch(createBook(book)); },
-  };
+BookForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
 };
+
+const mapDispatchToProps = dispatch => ({
+  createBook: book => { dispatch(createBook(book)); },
+});
 
 export default connect(null, mapDispatchToProps)(BookForm);
