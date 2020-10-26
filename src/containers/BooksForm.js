@@ -1,7 +1,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createBook } from '../actions/index';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions';
 
 class BookForm extends Component {
   constructor() {
@@ -25,9 +26,7 @@ class BookForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    // eslint-disable-next-line react/prop-types
     this.props.createBook(this.state);
-    // console.log(this.state);
     e.target.reset();
     this.resetState();
   }
@@ -76,6 +75,10 @@ class BookForm extends Component {
     );
   }
 }
+
+BookForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = dispatch => ({
   createBook: book => { dispatch(createBook(book)); },

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 // eslint-disable-next-line arrow-body-style
 const Book = ({ book, handleRemoveBook }) => {
-  const myFunc = bookz => { handleRemoveBook(bookz); };
   const {
     author, id, title, category,
   } = book;
@@ -14,7 +13,7 @@ const Book = ({ book, handleRemoveBook }) => {
       <td>{title}</td>
       <td>{category}</td>
       <td>
-        <button type="button" onClick={() => myFunc(book)}>
+        <button type="button" onClick={() => handleRemoveBook(book)}>
           Remove Book
         </button>
       </td>
