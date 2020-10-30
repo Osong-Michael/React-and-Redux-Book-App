@@ -12,7 +12,7 @@ class BookForm extends Component {
       author: '',
       id: Math.random(),
       title: '',
-      category: '',
+      category: 'Action',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -60,11 +60,11 @@ class BookForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="author">
           Author:
-          <input name="author" type="text" onChange={this.handleChange} />
+          <input name="author" type="text" onChange={this.handleChange} required />
         </label>
         <label htmlFor="title">
           Title:
-          <input name="title" type="text" onChange={this.handleChange} />
+          <input name="title" type="text" onChange={this.handleChange} required />
         </label>
 
         <select name="category" onChange={this.handleChange} value={this.state.category}>
