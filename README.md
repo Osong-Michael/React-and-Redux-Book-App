@@ -101,7 +101,7 @@ This project was built using these technologies.
 [stars-url]: https://github.com/OA7/React-and-Redux-Book-App/stargazers
 [issues-shield]: https://img.shields.io/github/issues/OA7/React-and-Redux-Book-App.svg?style=flat-square
 [issues-url]: https://github.com/OA7/React-and-Redux-Book-App/issues
-[product-screenshot]: public/
+[product-screenshot]: public/screen.png
 <!-- [product-screenshot2]: dist/images/page2.png -->
 
 

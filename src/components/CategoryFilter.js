@@ -13,7 +13,7 @@ const CategoryFilter = ({ onChange }) => {
   ];
 
   return (
-    <select onChange={e => onChange(e.target.value)}>
+    <select onChange={e => onChange(e.target.value)} className="filter-top">
       {
         ['All', ...categories].map((category, idx) => (
           <option key={category} default={idx === 0 && true} value={category}>{category}</option>))

@@ -28,29 +28,23 @@ function BooksList({
 
   if (bookList.length < 1) {
     bookList = (
-      <tr>
+      <p className="not-found">
         <td>No Books in this Category</td>
-      </tr>
+      </p>
     );
   }
 
   return (
     <>
-      <CategoryFilter onChange={changeFilter} />
+      <nav className="header">
+        <h1 className="book-app">MY BOOKS</h1>
+        <p className="books-nav">Books</p>
+        <CategoryFilter onChange={changeFilter} />
+      </nav>
       <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Book Author</th>
-              <th>Book ID</th>
-              <th>Book Title</th>
-              <th>Category</th>
-            </tr>
-          </thead>
-          <tbody>
-            { bookList }
-          </tbody>
-        </table>
+        <div className="books-ctn">
+          { bookList }
+        </div>
       </div>
     </>
   );
