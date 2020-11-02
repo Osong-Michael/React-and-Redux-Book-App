@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background-color: #f5f6fa;
+}
+
+button {
+  border-radius: 3px;
 }
 
 .ctn {
@@ -7,7 +12,6 @@ body {
   width: 80%;
   margin: 30px auto;
   padding: 20px;
-  background-color: #f5f6fa;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -20,10 +24,20 @@ body {
 }
 
 .book {
-  border: 1px solid#c7c7c7;
+  border: 1px solid#e8e8e8;
   margin-bottom: 20px;
   background-color: #fff;
+  border-radius: 4px;
   padding: 10px 12px 25px 27px;
+  position: relative;
+}
+
+.rect {
+  position: absolute;
+  right: 400px;
+  top: 45px;
+  width: 190px;
+  height: 89.9px;
 }
 
 .cat {
@@ -48,7 +62,7 @@ body {
   /* border: 1px solid red; */
   margin-top: -17px;
   font-size: 15px;
-  font-weight: lighter;
+  font-weight: 300;
   padding-left: 11px;
 }
 
@@ -81,12 +95,12 @@ body {
 
 .book-form {
   /* border: 1px solid green; */
-  padding: 5px;
+  /* padding: 5px; */
   margin-top: -30px;
 }
 
 .book-form input {
-  width: 300px;
+  width: 310px;
   margin-right: 30px;
   padding: 12px;
   outline: none;
@@ -104,7 +118,7 @@ body {
 }
 
 .book-form button {
-  width: 150px;
+  width: 160px;
   background-color: #0290ff;
   outline: none;
   border: none;
@@ -127,4 +141,62 @@ body {
   font-size: 25px;
   font-weight: bold;
   color: #0290ff;
+}
+
+.line {
+  border-left: 1px solid #e8e8e8;
+  position: absolute;
+  width: 2px;
+  height: 70px;
+  right: 300px;
+  top: 50px;
+}
+
+.update {
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  width: 200px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.chapter {
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  text-transform: uppercase;
+}
+
+.intro {
+  width: 90px;
+  height: 21px;
+  font-size: 17px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+  margin-top: -10px;
+}
+
+.update button {
+  background-color: #0290ff;
+  width: 90%;
+  padding: 10px;
+  font-weight: 100;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  font-weight: lighter;
+  margin-top: -10px;
 }

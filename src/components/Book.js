@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import completed from '../images/completed.png';
 
 const Book = ({ book, handleRemoveBook }) => {
   const {
-    author, id, title, category,
+    author, title, category,
   } = book;
   return (
     <div className="book">
@@ -22,6 +23,17 @@ const Book = ({ book, handleRemoveBook }) => {
         <div className="third-btn btn">
           <button type="button">Edit</button>
         </div>
+      </div>
+      <div className="rect">
+        <div className="circle">
+          <img src={completed} alt="Logo" />
+        </div>
+      </div>
+      <div className="line" />
+      <div className="update">
+        <p className="chapter">Current Chapter</p>
+        <p className="intro">Introduction</p>
+        <button type="button">Update Progress</button>
       </div>
     </div>
   );
