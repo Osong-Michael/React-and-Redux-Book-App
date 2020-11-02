@@ -6,17 +6,24 @@ const Book = ({ book, handleRemoveBook }) => {
     author, id, title, category,
   } = book;
   return (
-    <tr>
-      <td>{author}</td>
-      <td>{id}</td>
-      <td>{title}</td>
-      <td>{category}</td>
-      <td>
-        <button type="button" onClick={() => handleRemoveBook(book)}>
-          Remove Book
-        </button>
-      </td>
-    </tr>
+    <div className="book">
+      <p className="cat">{category}</p>
+      <p className="title">{title}</p>
+      <p className="author">{author}</p>
+      <div className="btns">
+        <div className="first-btn btn">
+          <button type="button">Comment</button>
+        </div>
+        <div className="second-btn btn">
+          <button type="button" onClick={() => handleRemoveBook(book)}>
+            Remove Book
+          </button>
+        </div>
+        <div className="third-btn btn">
+          <button type="button">Edit</button>
+        </div>
+      </div>
+    </div>
   );
 };
 

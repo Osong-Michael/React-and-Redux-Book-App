@@ -1,3 +1,75 @@
 body {
   margin: 0;
 }
+
+.ctn {
+  border: 1px solid red;
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f5f6fa;
+}
+
+.books-ctn {
+  /* border: 2px solid blue; */
+}
+
+.book {
+  border: 1px solid#c7c7c7;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px 12px 25px 27px;
+}
+
+.cat {
+  color:#888888;
+  /* border: 1px solid red; */
+  font-size: 15px;
+  font-weight: bolder;
+  padding-left: 11px;
+}
+
+.title {
+  color: #121212;
+  /* border: 1px solid red; */
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: -12px;
+  padding-left: 11px;
+}
+
+.author {
+  color: #4386bf;
+  /* border: 1px solid red; */
+  margin-top: -17px;
+  font-size: 15px;
+  font-weight: lighter;
+  padding-left: 11px;
+}
+
+.cat, .author, .title {
+  width: 15%;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  /* border: 1px solid red; */
+}
+
+.first-btn, .second-btn, .third-btn {
+  padding: 3px 7px;
+}
+
+.second-btn, .third-btn {
+  border-left: 1px solid #c4c4c4;
+}
+
+.btn button {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #4386bf;
+  cursor: pointer;
+}
