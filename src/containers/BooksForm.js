@@ -57,20 +57,13 @@ class BookForm extends Component {
     ));
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="author">
-          Author:
-          <input name="author" type="text" onChange={this.handleChange} required />
-        </label>
-        <label htmlFor="title">
-          Title:
-          <input name="title" type="text" onChange={this.handleChange} required />
-        </label>
-
-        <select name="category" onChange={this.handleChange} value={this.state.category}>
+      <form onSubmit={this.handleSubmit} className="book-form">
+        <input name="author" type="text" onChange={this.handleChange} placeholder="Author Name" required />
+        <input name="title" type="text" onChange={this.handleChange} placeholder="Book Title" required />
+        <select name="category" onChange={this.handleChange} value={this.state.category} className="select-tag">
           {catList}
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit">Add Book</button>
       </form>
     );
   }

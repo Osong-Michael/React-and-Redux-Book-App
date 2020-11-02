@@ -28,9 +28,9 @@ function BooksList({
 
   if (bookList.length < 1) {
     bookList = (
-      <tr>
+      <p className="not-found">
         <td>No Books in this Category</td>
-      </tr>
+      </p>
     );
   }
 
