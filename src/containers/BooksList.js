@@ -36,7 +36,11 @@ function BooksList({
 
   return (
     <>
-      <CategoryFilter onChange={changeFilter} />
+      <nav className="header">
+        <h1 className="book-app">MY BOOKS</h1>
+        <p className="books-nav">Books</p>
+        <CategoryFilter onChange={changeFilter} />
+      </nav>
       <div>
         <div className="books-ctn">
           { bookList }
